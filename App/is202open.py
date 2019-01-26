@@ -14,16 +14,16 @@ def is202Open():
     currTime = datetime.datetime.now().time()
 
     #loop through the list of classes
-    for class in classes:
+    for cl in classes:
         #if the current date is after the last day of classes
-        if datetime.datetime.today() > class[3]:
+        if datetime.datetime.now().date() > cl[3]:
             #remove the class from the list/continue
             continue
 
         #if the current day of the week is the class day of the week
-        if currDotW = class[0]:
+        if currDotW == cl[0]:
             #is the curr time in between the start and stop time?
-            if currTime >= class[1] and currTime <= class[2]:
+            if currTime >= cl[1] and currTime <= cl[2]:
                 return "no"
 
     #end of the loop, return "yes"
