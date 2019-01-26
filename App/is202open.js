@@ -29,9 +29,9 @@ for (var i = 0; i < classes.length; i++) {
         && currMinute >= classes[i].startMinute && currHour <= classes[i].endHour
         && currMinute <= classes[i].endMinute) {
         //there's a class, return "no"
-        alert("NO");
+        document.write("NO");
     }
 }
 
 //end of the loop, return "yes"
-alert("Yes");
+document.write("Yes");
