@@ -1,6 +1,5 @@
 '''Is 202 open? Lets find out'''
 import datetime
-import cgi
 
 #create list of classes in 202 - list of touples?
 #touple - (weekday, startTime, endTime, lastDay)
@@ -31,7 +30,4 @@ def is202Open():
     return "yes"
 
 #calling CGI stuff in python
-print("Content-Type: text/html")
-print()
-print("<title>Is MCB 202 open?</title>")
 print("<H>" + is202Open() + "</H>")
