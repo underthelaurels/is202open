@@ -1,7 +1,0 @@
-//test
-//store the times and dates that the room has a class (in use)
-//grab current time and date
-//compare them
-//display result
-//system.print 
-//
