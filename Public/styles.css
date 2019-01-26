@@ -1,8 +1,13 @@
 body {
-  font-size: 48px;
+  font-size: 300px;
   text-align: center;
-  padding-top: 40%;
   font-family: "Comic Sans MS", cursive, serif;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.rainbow {
   background: red;
   background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
   background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
@@ -10,4 +15,6 @@ body {
   background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: 0;
+  padding: 0;
 }
