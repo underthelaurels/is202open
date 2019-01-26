@@ -1,0 +1,8 @@
+Options -Indexes
+
+RewriteEngine on
+
+# ErrorDocument 404 /error.php
+
+# Site
+RewriteRule ^$ Public/main.html [QSA,L]
