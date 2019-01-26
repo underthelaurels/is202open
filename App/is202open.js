@@ -1,15 +1,40 @@
 //Is 202 open? Lets find out
 
-//create list of classes in 202 - list of touples?
-//touple - (weekday, startTime, endTime, lastDay)
+//get list of classes in 202
+//STORED AS - (Weekday, StartHour, StartMinute, EndHour, EndMinute, LastDay)
 
 //define function
+function is202Open() {
+    //store the classes
+    var last = new Date(2019, 5, 8);
+    var class1 = {weekday:1, startHour:10, startMinute:10, endHour:12, endMinute:45, lastDay:last};
+    var class2 = {weekday:1, startHour:13, startMinute:25, endHour:14, endMinute:15, lastDay:last};
+    var class3 = {weekday:3, startHour:10, startMinute:10, endHour:12, endMinute:45, lastDay:last};
+    var class4 = {weekday:3, startHour:13, startMinute:25, endHour:14, endMinute:15, lastDay:last};
+    var classes = new Array(class1, class2, class3, class4);
+
     //store current DotW/Time
+    var today = new Date();
+    var currDotW = today.getDay();
+    var currHour = today.getHours();
+    var currMinute = today.getMinutes();
 
     //loop through the list of classes
+    for (var i = 0; i < classes.length; i++) {
         //if the current date is after the last day of classes
+        if (today > classes[i].lastDay) {
             //remove the class from the list/continue
-        //if the current day of the week is the class day of the week
-            //is the curr time in between the start and stop time?
-                //there's a class, return "no"
+            continue;
+        }
+        //if the current DotW is the class DotW and the curr time in between the start and stop time
+        if (currDotW == classes[i].weekday && currHour >= classes[i].startHour
+            && currMinute >= classes[i].startMinute && currHour <= classes[i].endHour
+            && currMinute <= classes[i].endMinute) {
+            //there's a class, return "no"
+            return "no";
+        }
+    }
+
     //end of the loop, return "yes"
+    return "yes";
+}
