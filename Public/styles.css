@@ -5,6 +5,7 @@ body {
 }
 
 button {
+  font-size: 45px;
   background-color: #555555;
   background: red;
   background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);

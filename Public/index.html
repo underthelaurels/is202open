@@ -4,8 +4,16 @@
   <link rel="stylesheet" href="/Public/styles.css">
 </head>
 <title>Is 202 Open??</title>
-  <body>
+  <body id="body">
     <script src = "/../App/is202open.js"></script>
-    <button type="button">Rainbow!</button>
+    <br>
+    <button onclick="rainbowClick()">Rainbow!</button>
   </body>
 </html>
+
+<script>
+  function rainbowClick() {
+    var randColor = Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById("body").style.color = "#" + randColor;
+  }
+</script>
