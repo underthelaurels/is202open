@@ -16,6 +16,7 @@ var today = new Date();
 var currDotW = today.getDay();
 var currHour = today.getHours();
 var currMinute = today.getMinutes();
+var printed = false;
 
 //loop through the list of classes
 for (var i = 0; i < classes.length; i++) {
@@ -29,9 +30,12 @@ for (var i = 0; i < classes.length; i++) {
         && currMinute >= classes[i].startMinute && currHour <= classes[i].endHour
         && currMinute <= classes[i].endMinute) {
         //there's a class, return "no"
-        document.write("NO");
+        document.write("No");
+        printed = true;
     }
 }
 
 //end of the loop, return "yes"
-document.write("Yes");
+if (!printed) {
+    document.write("Yes");
+}
